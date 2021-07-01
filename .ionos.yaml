@@ -1,0 +1,13 @@
+---
+distFolder: dist
+setup:
+  - name: Setup Node.js v14.x
+    action: actions/setup-node@v1
+    properties:
+      node-version: v14.x
+prepare:
+  name: Prepare project build environment
+  command: npm ci
+build:
+  name: Build sli.dev
+  command: npm run build
